@@ -1,0 +1,29 @@
+{% extends "homeless/layout.html" %}
+
+{% block heading %}
+{% endblock %}
+{% block body %}
+<div class="contact_form">
+
+
+<form action="{% url 'saved' %}" method="post">
+  {% csrf_token %}
+  <fieldset class="uk-fieldset">
+      <legend class="uk-legend">Contact Us</legend>
+
+      <div class="uk-margin">
+          <input class="uk-input" type="text" placeholder="Full Name" name="name">
+      </div>
+
+      <div class="uk-margin">
+          <input class="uk-input" type="email" placeholder="Email-Id" name="email">
+      </div>
+
+      <div class="uk-margin">
+          <textarea class="uk-textarea" rows="5" placeholder="Purpose of Contact" name="purpose"></textarea>
+      </div>
+  </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "homeless/layout.html" %}
+{% load static %}
+
+  {% block title %}
+  {% endblock %}
+
+  {% block body %}
+<div class="about_creators">
+
+  <div uk-parallax="stroke: 45">
+  <img src="https://getuikit.com/docs/images/strokes.svg" alt="" uk-svg>
+  </div>
+  <br>
+  <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-reveal">Select you state</button>
+  <h1>Welcome to {{ data }}</h1>
+</div>
+
+  <div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+
+        <h3>List Of States</h3>
+
+        <ul class="uk-list">
+          <a href="{% url 'stateinfra' 'Jammu&Kashmir' %}"><li>Jammu & Kashmir</li></a>
+          <a href="{% url 'stateinfra' 'Delhi' %}"><li>Delhi</li></a>
+          <a href="{% url 'stateinfra' 'Mumabi' %}"><li>Mumbai</li></a>
+          <a href="{% url 'stateinfra' 'Uttar-Pradesh' %}"><li>Uttar Pradesh</li></a>
+          <a href="{% url 'stateinfra' 'Madhya-Pradesh' %}"><li>Madhya Pradesh</li></a>
+          <a href="{% url 'stateinfra' 'Bihar' %}"><li>Bihar</li></a>
+          <a href="{% url 'stateinfra' 'Jharkhand' %}"><li>Jharkhand</li></a>
+          <a href="{% url 'stateinfra' 'Karnataka' %}"><li>Karnataka</li></a>
+          <a href="{% url 'stateinfra' 'Hyderabad' %}"><li>Hyderabad</li></a>
+          <a href="{% url 'stateinfra' 'Telangana' %}"><li>Telangana</li></a>
+          <a href="{% url 'stateinfra' 'Tamil-Nadu' %}"><li>Tamil Nadu</li></a>
+          <a href="{% url 'stateinfra' 'Kerela' %}"><li>Kerala</li></a>
+          <a href="{% url 'stateinfra' 'Assam' %}"><li>Assam</li></a>
+          <a href="{% url 'stateinfra' 'West-Bengal' %}"><li>West Bengal</li></a>
+          <a href="{% url 'stateinfra' 'Mizoram' %}"><li>Mizoram</li></a>
+          <a href="{% url 'stateinfra' 'Laddakh' %}"><li>Laddakh</li></a>
+          <a href="{% url 'stateinfra' 'Chhattisgarh' %}"><li>Chhattisgarh</li></a>
+          <a href="{% url 'stateinfra' 'Orissa' %}"><li>Orissa</li></a>
+          <a href="{% url 'stateinfra' 'Rajasthan' %}"><li>Rajasthan</li></a>
+          <a href="{% url 'stateinfra' 'Andhra-Pradesh' %}"><li>Andhra Pradesh</li></a>
+          <a href="{% url 'stateinfra' 'Meghalaya' %}"><li>Meghalaya</li></a>
+          <a href="{% url 'stateinfra' 'Arunachal-Pradesh' %}"><li>Arunachal Pradesh</li></a>
+          <a href="{% url 'stateinfra' 'Sikkin' %}"><li>Sikkim</li></a>
+          <a href="{% url 'stateinfra' 'Punjab' %}"><li>Punjab</li></a>
+          <a href="{% url 'stateinfra' 'Uttranchal' %}"><li>Uttranchal</li></a>
+          <a href="{% url 'stateinfra' 'Daman&Diu' %}"><li>Daman and Diu</li></a>
+          <a href="{% url 'stateinfra' 'Dadra&Nagar-Haveli' %}"><li>Dadra and Nagar Haveli</li></a>
+          <a href="{% url 'stateinfra' 'Andaman&Nicobar' %}"><li>Andaman and Nicobar</li></a>
+        </ul>
+    </div>
+</div>
+
+  {% endblock %}
+
+  {% block nav %}
+  {% endblock %}
